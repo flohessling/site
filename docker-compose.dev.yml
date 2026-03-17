@@ -1,0 +1,9 @@
+services:
+  web:
+    image: caddy:2-alpine
+    container_name: web-dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data/www:/data/www:ro
+      - ./data/Caddyfile.dev:/etc/caddy/Caddyfile:ro
